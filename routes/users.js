@@ -23,7 +23,7 @@ router.post('/signup', function (req, res, next) {
 	});
 	userinfo.save(function (err, Asignup) {
 		if (err) return JSON.stringify(err);
-		//saved
+			console.log(err)
 		if (Asignup) {
 
 			res.send({ status: true, message: "success" })
