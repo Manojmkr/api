@@ -18,12 +18,11 @@ router.get('/', function(req, res, next) {
 
 router.post('/signup', function (req, res, next) {
 	var userinfo = new User({
-		name: req.body.name,
-		password: req.body.password
+		"name": req.body.name,
+		"password": req.body.password
 	});
 	userinfo.save(function (err, Asignup) {
 		if (err) return JSON.stringify(err);
-			console.log(err)
 		if (Asignup) {
 
 			res.send({ status: true, message: "success" })
